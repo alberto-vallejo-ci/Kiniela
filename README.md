@@ -1,4 +1,4 @@
 Projects
 ========
 
-Simple projects to practices on Ruby on Rails
+Simple project to practices on Ruby on Rails. This project is about carry out game stadistics, programming games, show scores and handle teams.
