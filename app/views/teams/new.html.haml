@@ -1,0 +1,10 @@
+%h3
+	New Team
+
+=form_for @team do |f|
+	=f.label 'Name'
+	=f.text_field :name
+	=f.submit 'Create'
+
+%p
+	=link_to 'Go to Teams', '/teams'
