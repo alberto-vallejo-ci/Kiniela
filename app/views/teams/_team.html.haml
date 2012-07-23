@@ -1,2 +1,5 @@
-%li
-	=team.name
+%tr
+	%th
+		=team.name
+	%th
+		= link_to 'Destroy', team, confirm: 'Are you sure?', method: :delete

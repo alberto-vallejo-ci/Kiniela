@@ -12,7 +12,11 @@ class TeamsController < ApplicationController
 	end
 
 	def create
-		Team.create(name: params[:name])
-		render action: 'show'
+		Team.create(params[:team])
+		redirect_to :back
+	end
+	def destroy
+		Team.find(params[:id]).destroy
+		redirect_to :back
 	end
 end
