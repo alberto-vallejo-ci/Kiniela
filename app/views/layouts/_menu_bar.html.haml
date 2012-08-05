@@ -2,7 +2,7 @@
 	%div.navbar-inner
 		%div.container
 			%ul.nav
-				%li.active
+				%li{:class => active_menu(:dashboard)}
 					= link_to 'Dashboard', root_path
-				%li
+				%li{:class => active_menu(:teams)}
 					= link_to 'Teams', teams_path 
