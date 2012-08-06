@@ -1,8 +1,12 @@
 %div.navbar
 	%div.navbar-inner
 		%div.container
+			%a.brand{href: '#'}
+				Kiniela
 			%ul.nav
 				%li{:class => active_menu(:dashboard)}
 					= link_to 'Dashboard', root_path
 				%li{:class => active_menu(:teams)}
-					= link_to 'Teams', teams_path 
+					= link_to 'Teams', teams_path
+				%li{:class => active_menu(:games)}
+					= link_to 'Games', games_path
