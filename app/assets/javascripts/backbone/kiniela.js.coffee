@@ -4,8 +4,13 @@
 #= require_tree ./views
 #= require_tree ./routers
 
-window.Kiniela =
+window.App =
   Models: {}
   Collections: {}
   Routers: {}
   Views: {}
+  init: ->
+  	Backbone.history.start()
+
+$(document).ready ->
+	App.init()
