@@ -1,8 +1,22 @@
 %h1
 	Teams
+%div.row
+	%div.span4
+		%ul#team-nav
+			%li.active
+				= link_to 'show all teams', '#', id: 'show-teams'
+			%li
+				= link_to 'new team', '#', id: 'new-team'
 
-%ul
-	%li
-		= link_to 'show all teams', '/teams/show'
-	%li
-		= link_to 'new team', new_team_path
+
+	%div.span8
+		%div.teams-container
+			%ul
+
+:javascript
+	$(function(){
+		window.App.teams = new App.Teams();
+		App.teams.fetch();
+
+		new App.TeamSideBar({ collection: App.teams });
+	});

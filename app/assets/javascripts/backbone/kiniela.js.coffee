@@ -1,5 +1,5 @@
 #= require_self
-#= require_tree ./templates
+#= require_tree ./templates 
 #= require_tree ./models
 #= require_tree ./views
 #= require_tree ./routers
@@ -10,7 +10,8 @@ window.App =
   Routers: {}
   Views: {}
   init: ->
-  	Backbone.history.start()
+  	# App.route = new App.TeamRouter()
+  	# Backbone.history.start()
 
 $(document).ready ->
 	App.init()

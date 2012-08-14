@@ -1,10 +1,13 @@
 class TeamsController < ApplicationController
+	respond_to :html, :json
+	
 	def index
 		
 	end
 
 	def show
 		@teams = Team.all
+		respond_with @teams
 	end
 
 	def new

@@ -1,0 +1,1 @@
+class App.TeamRouter extends Backbone.Router
