@@ -1,31 +1,30 @@
 class App.TeamSideBar extends Backbone.View
-	el: '#team-nav'
+	el: '.teams-container'
 
 	events:
-		'click #show-teams' :	'showTeams'
-		'click #new-team'	:	'createTeam' 	
+		'click .create-team'  : 'createTeam'
+		'click .manage-teams' : 'manageTeams'
 
 	template: JST['backbone/templates/team_list']
 
 	initialize: ->
 		@collection.on('reset', @addAll, @)
 		@collection.on('add', @addAll, @)
+		@collection.on('sync', @addAll, @)
+
 
 	addAll: ->
-		$('.teams-container').html ''
-		$('.teams-container').append '<ul></ul>'
-		@collection.forEach(@addOne, @)
-		console.log 'wip'
+		@$el.find('ul').html ''
+		@collection.sort({silent:true}).forEach(@addOne, @)
 
 	addOne: (model) ->
 		data = model.toJSON()
-		$('.teams-container').find('ul').append @template(data)
-
-	showTeams: (e)->
-		e.preventDefault() if e
-		@addAll()
-		console.log 'wop'
+		@$el.find('ul').append @template(data)
 
 	createTeam: (e)->
-		e.preventDefault()
-		$('.teams-container').html('<h1>Create Team</h1>');
+		e.preventDefault
+		new App.CreateTeamView({ collection: @collection })
+
+	manageTeams: (e)->
+		e.preventDefault
+		console.log 'Manage'

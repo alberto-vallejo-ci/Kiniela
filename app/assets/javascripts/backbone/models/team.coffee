@@ -1,10 +1,13 @@
 class App.Team extends Backbone.Model
     defaults:
-        ids: []
+        name:   ''
 
-    urlRoot: '/teams/show'
+    urlRoot: '/teams'
 
 
 class App.Teams extends Backbone.Collection
     model: App.Team
-    url: '/teams/show'
+    url: '/teams'
+
+    comparator: (team) ->
+        team.get 'name'
