@@ -1,7 +1,11 @@
 %h1 Teams
 
-.teams-container
-	%ul.nav.nav-list
+.container-fluid.teams-container
+	.row-fluid
+		.span2
+			%ul.nav.nav-list
+		
+		.span8 Hola
 
 	.actions
 		%buttom.btn.create-team Create Team
@@ -11,7 +15,7 @@
 
 :javascript
 	$(function(){
-		window.App.teams = new App.Teams();
+		App.teams = new App.Teams();
 		App.teams.fetch();
 
 		new App.TeamSideBar({ collection: App.teams });

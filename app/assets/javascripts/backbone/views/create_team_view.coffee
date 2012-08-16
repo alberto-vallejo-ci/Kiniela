@@ -22,16 +22,16 @@ class App.CreateTeamView extends Backbone.View
             resizable: false
             position: [width.toString()], 100
             modal: true
-            close: => @closeDialog
+            close: => @undelegateEvents()
 
     closeDialog: (e) ->
-        e.preventDefault() if e
         @undelegateEvents()
+        e.preventDefault() if e
         $('#create-team-dialog').dialog('close')
 
     cancelTeam: (e) ->
-        e.preventDefault
-        @closeDialog(e)
+        e.preventDefault()
+        @closeDialog()
 
     createTeam: (e) ->
         e.preventDefault
