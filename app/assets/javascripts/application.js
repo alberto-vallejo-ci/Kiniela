@@ -19,3 +19,5 @@
 //= require backbone/kiniela
 //= require_tree .
 //= require bootstrap
+//= require jquery.min
+//= require jquery-ui.min
