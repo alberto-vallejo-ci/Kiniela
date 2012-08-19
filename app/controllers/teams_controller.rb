@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
 	respond_to :html, :json
-	
+
 	def index
 		@teams = Team.order('name ASC')
 		respond_with @teams

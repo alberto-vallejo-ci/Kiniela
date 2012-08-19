@@ -1,12 +1,12 @@
 %h3
-	New Team
+    New Team
 
 =form_for @team do |f|
-	%div.field
-		=f.label :name
-		=f.text_field :name
-	%div.actions
-		=f.submit 'Create'
+    %div.field
+        =f.label :name
+        =f.text_field :name
+    %div.actions
+    =f.submit 'Create'
 
 %p
-	=link_to 'Go to Teams', '/teams'
+    =link_to 'Go to Teams', '/teams'
