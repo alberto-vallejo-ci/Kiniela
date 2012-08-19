@@ -15,12 +15,12 @@ class App.CreateTeamView extends Backbone.View
         @$el.html @template
 
     dialogize: ->
-        width = $(window).width() / 2
+        width = $(window).width() / 3
         $('#create-team-dialog').dialog
             title: 'Create Team'
             width: 400
             resizable: false
-            position: [width.toString()], 100
+            position: [width, 100]
             modal: true
             close: => @undelegateEvents()
 
