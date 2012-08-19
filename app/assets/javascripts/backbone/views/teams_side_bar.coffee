@@ -11,7 +11,7 @@ class App.TeamSideBar extends Backbone.View
 		@collection.on('reset', @addAll, @)
 		@collection.on('add', @addAll, @)
 		@collection.on('sync', @addAll, @)
-
+		@collection.on('remove', @addAll, @)
 
 	addAll: ->
 		@$el.find('ul').html ''
@@ -27,4 +27,4 @@ class App.TeamSideBar extends Backbone.View
 
 	manageTeams: (e)->
 		e.preventDefault
-		console.log 'Manage'
+		new App.ManageTeamsView({ collection: @collection })

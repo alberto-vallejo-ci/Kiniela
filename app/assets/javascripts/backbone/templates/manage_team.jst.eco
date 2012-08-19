@@ -1,0 +1,8 @@
+<a href='#' class='team-name' id=<%= @id %> > <%= @name %> </a>
+<input type='text' class='team-name hidden' value="<%= @name %>" />
+<div class='actions'>
+    <buttom class='btn' id="edit-team">Edit</buttom>
+    <buttom class='btn btn-danger' id="delete-team">Delete</buttom>
+    <buttom class='btn hidden' id="save-edit-team">Save</buttom>
+    <buttom class='btn hidden' id="cancel-edit-team">Cancel</buttom>
+</div>
