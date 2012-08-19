@@ -8,7 +8,7 @@ class App.ManageTeamView extends Backbone.View
         'click #save-edit-team'     : 'saveTeam'
         'click #cancel-edit-team'   : 'cancelEditTeam'
 
-    template: JST['backbone/templates/manage_team']
+    template: JST['backbone/templates/teams/manage_team']
 
     render: ->
         @$el.html @template(@model.toJSON())

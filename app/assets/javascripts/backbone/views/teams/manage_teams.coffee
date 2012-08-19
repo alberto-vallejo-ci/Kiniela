@@ -1,7 +1,7 @@
 class App.ManageTeamsView extends Backbone.View
     el: '#manage-teams-dialog'
 
-    template: JST['backbone/templates/manage_teams']
+    template: JST['backbone/templates/teams/manage_teams']
 
     initialize: ->
         @collection.on('sync', @addAll, @)

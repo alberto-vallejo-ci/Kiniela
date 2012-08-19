@@ -5,7 +5,7 @@ class App.CreateTeamView extends Backbone.View
         'click #cancel-team' : 'cancelTeam'
         'click #create-team' : 'createTeam'
 
-    template: JST['backbone/templates/create_team']
+    template: JST['backbone/templates/teams/create_team']
 
     initialize: ->
         @setDialog()

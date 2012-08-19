@@ -5,7 +5,7 @@ class App.TeamSideBar extends Backbone.View
 		'click .create-team'  : 'createTeam'
 		'click .manage-teams' : 'manageTeams'
 
-	template: JST['backbone/templates/team_list']
+	template: JST['backbone/templates/teams/team_list']
 
 	initialize: ->
 		@collection.on('reset', @addAll, @)
