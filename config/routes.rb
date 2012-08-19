@@ -60,6 +60,6 @@ resources :games
 resources :teams
 resources :dashboard
 
-root :to => 'dashboard#index'
+root to: 'dashboard#index'
   
 end
