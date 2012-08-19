@@ -6,20 +6,19 @@ class TeamsController < ApplicationController
 		respond_with @teams
 	end
 
-	def show
-		
-	end
-
-	def new
-		@team = Team.new
+	def update
+		@team = Team.find(params[:id])
+		@team.update_attribute(:name, params[:name])
+		respond_with @team
 	end
 
 	def create
-		Team.create(params[:team])
-		redirect_to :back
+		@team = Team.create(params[:team])
+		respond_with @team
 	end
+	
 	def destroy
-		Team.find(params[:id]).destroy
-		redirect_to :back
+		@team = Team.find(params[:id]).destroy
+		respond_with @team
 	end
 end
