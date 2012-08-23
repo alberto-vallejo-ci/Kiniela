@@ -11,14 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define( version: 20120820024428) do
+ActiveRecord::Schema.define( version: 20120823031424) do
 
   create_table "games", force: true do |t|
-    t.integer "local_team_id"
-    t.integer "visitor_team_id"
-    t.integer "local_score"
-    t.integer "visitor_score"
     t.integer "winner_team_id"
+  end
+
+  create_table "gamings", :force => true do |t|
+    t.integer "team_id"
+    t.integer "game_id"
+    t.integer "score",   :default => 0
   end
 
   create_table "teams", force: true do |t|
