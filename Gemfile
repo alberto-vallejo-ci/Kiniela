@@ -30,6 +30,8 @@ gem 'eco'
 
 gem "rails_best_practices"
 
+gem "active_model_serializers", :git => "git://github.com/josevalim/active_model_serializers.git"
+
 #gem 'devise'
 
 # To use ActiveModel has_secure_password
