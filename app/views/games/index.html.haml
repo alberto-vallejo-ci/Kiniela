@@ -4,5 +4,15 @@
     .games-actions
         %button.btn Create Game
 
-    %ul.games-list
+    %table.games-list
+
+:javascript
+    $(function(){
+        App.games_json = #{ @games.to_json( include: [:gamings, teams: { only: [:id, :name] } ] ) }
+        App.games = new App.Games();
+        App.games.reset(App.games_json);
+
+        new App.GamesList({collection: App.games});
+
+    });
        

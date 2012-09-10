@@ -1,0 +1,7 @@
+<tr id="<%= @id %>">
+    <td><input type='text' class='score' id='local-score' value = " <%= @gamings[0].score %> "></td>
+    <td><a href='#' class='team-name' id='local-name'><%= @teams[0].name %></a></td>
+    <td><label>VS</label></td>
+    <td><a href='#' class='team-name' id='visitor-name'><%= @teams[1].name %></a></td>
+    <td><input type='text' class='score' id='visitor-score' value = " <%= @gamings[1].score %> "></td>
+</li>
