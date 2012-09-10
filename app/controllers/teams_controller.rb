@@ -3,7 +3,7 @@ class TeamsController < ApplicationController
 
 	def index
 		@teams = Team.order('name ASC')
-		respond_with @teams
+		respond_with @teams, root: false
 	end
 
 	def update
