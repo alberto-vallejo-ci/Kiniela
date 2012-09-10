@@ -1,3 +1,6 @@
 class Team < ActiveRecord::Base
-  attr_accessible :name
+    has_many :gamings
+    has_many :games, through: :gamings
+  
+    attr_accessible :name
 end
