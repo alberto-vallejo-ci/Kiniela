@@ -32,6 +32,10 @@ gem "rails_best_practices"
 
 gem "active_model_serializers", :git => "git://github.com/josevalim/active_model_serializers.git"
 
+group :test do
+    gem 'rspec'
+end
+
 #gem 'devise'
 
 # To use ActiveModel has_secure_password
