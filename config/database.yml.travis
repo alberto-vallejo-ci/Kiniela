@@ -1,0 +1,19 @@
+travis: &travis
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password:
+  timeout: 5000
+
+development:
+  <<: *travis
+  database: kiniela_development
+
+test:
+  <<: *travis
+  database: kiniela_test
+
+production:
+  <<: *travis
+  database: kiniela_development
