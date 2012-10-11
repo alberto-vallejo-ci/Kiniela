@@ -32,8 +32,8 @@ gem "rails_best_practices"
 
 gem "active_model_serializers", :git => "git://github.com/josevalim/active_model_serializers.git"
 
-group :test do
-    gem 'rspec'
+group :test, :development do
+  gem "rspec-rails"
 end
 
 #gem 'devise'
