@@ -10,8 +10,6 @@ before_install:
 before_script:
   - mysql -e 'create database kiniela_test;'
   - cp config/database.yml.travis config/database.yml
-  - bundle exec rake db:local_schema:load >> /dev/null 2>&1
   - bundle exec rake db:migrate >> /dev/null 2>&1
-  - bundle exec rake db:test:prepare_local >> /dev/null 2>&1
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
