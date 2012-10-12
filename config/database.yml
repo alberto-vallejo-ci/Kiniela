@@ -10,10 +10,13 @@ development:
   <<: *kiniela
   database: kiniela_development
 
-test:
+test: &test
   <<: *kiniela
   database: kiniela_test
 
 production:
   <<: *kiniela
   database: kiniela_development
+
+cucumber:
+  <<: *test
