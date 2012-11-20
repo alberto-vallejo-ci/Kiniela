@@ -30,7 +30,7 @@ gem 'eco'
 
 gem "rails_best_practices"
 
-gem "active_model_serializers", :git => "git://github.com/josevalim/active_model_serializers.git"
+gem "active_model_serializers", :git => "git://github.com/rails-api/active_model_serializers.git"
 
 group :test, :development do
   gem "rspec-rails"
