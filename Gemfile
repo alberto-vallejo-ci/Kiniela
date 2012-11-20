@@ -40,6 +40,7 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem "capybara-webkit"
   gem 'database_cleaner'
+  gem 'simplecov', :require => false
 end
 
 #gem 'devise'
