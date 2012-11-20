@@ -1,0 +1,6 @@
+Feature: Admin user can create modidy and delete teams
+
+    Scenario: Create a teams
+        Given I am on "Dashboard" page
+        When  I click on "Teams" within bar menu
+        Then  I am on "Teams" page
